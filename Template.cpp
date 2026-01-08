@@ -1,10 +1,10 @@
-#ifndef DualStereoPan_h
-#define DualStereoPan_h
+#ifndef Template_h
+#define Template_h
 
 #include "Patch.h"
 #include "FloatArray.h"
 
-class DualStereoPan : public Patch {
+class Template : public Patch {
 	
 	private: 
 		 FloatArray left_duplicate;
@@ -12,7 +12,7 @@ class DualStereoPan : public Patch {
 		 
 	
     public:
-	   DualStereoPan() {
+	   Template() {
 	
 		 registerParameter(PARAMETER_A, "Gain 1");
          registerParameter(PARAMETER_B, "Gain 2");
@@ -22,7 +22,7 @@ class DualStereoPan : public Patch {
          right_duplicate = FloatArray::create(getBlockSize());
 		 
 	}
-	~DualStereoPan(){
+	~Template(){
 		
 		FloatArray::destroy(left_duplicate);
 		FloatArray::destroy(right_duplicate);
